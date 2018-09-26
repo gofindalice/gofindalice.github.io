@@ -1,20 +1,8 @@
 
 
 body{
-	background-color: lightblue;
+	background-color: steelblue;
 	color: white;
-
-}
-
-h1{
-	color: :white:
-	font-family: Helvetica, Arial, sans-serif
-	font-size 60px;
-	font-style: italic;
-
-}
-a
-	../*color:black;*/
 }
 
 title{
@@ -27,22 +15,16 @@ title{
 	text-align: center;
 	border-color: silver;
 	border-width: 4px;
+	font-size: 25px;
 }
-
-.titlee{
-    color: white;
-    font-size: 30px;
-    font-family: Verbana, sans-serif;
-    font-style: bold;
- }
   
-
  .bio{
  	color: white;
     font-size: 20px;
-    font-family: Helvetica; sans-serif;
+    font-family: Arial;
  }
 
  .smaller-image{
  	width: 20%;
+ 	margin: 4px;
  }
