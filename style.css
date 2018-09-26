@@ -1,9 +1,7 @@
 
 
 body{
-	background-color: rgb(234, 232, 170)
-	background-color: palegoldenrod;
-	background-color: #EAA910;
+	background-color: lightblue;
 	color: white;
 
 }
@@ -25,8 +23,26 @@ title{
 	font-style: bold;
 }
 
-.abc{
-    color: white;
-    font-size: 20px;
+.main-container{
+	text-align: center;
+	border-color: silver;
+	border-width: 4px;
+}
 
-  }
+.titlee{
+    color: white;
+    font-size: 30px;
+    font-family: Verbana, sans-serif;
+    font-style: bold;
+ }
+  
+
+ .bio{
+ 	color: white;
+    font-size: 20px;
+    font-family: Helvetica; sans-serif;
+ }
+
+ .smaller-image{
+ 	width: 20%;
+ }
