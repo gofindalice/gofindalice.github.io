@@ -1,7 +1,9 @@
 
 
 body{
-	background-color: steelblue;
+	background: -moz-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+	background: -webkit-linear-gradient(-45deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
+	background: linear-gradient(135deg, rgba(26, 188, 156, 1) 0%, rgba(142, 68, 173, 1) 100%);
 	color: white;
 }
 
@@ -28,3 +30,87 @@ title{
  	width: 20%;
  	margin: 4px;
  }
+
+
+@keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-20px);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px);
+	}
+}
+
+@mixin increment-delay($offset: .05s, $count: 10, $delay: 0, $type: transition) {
+	@for $i from 1 through $count {
+		$time: ($i * $offset) + $delay;
+		&:nth-child(#{$i}) {
+			#{$type}-delay: $time;
+		}
+	}
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+.emojis {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 50%;
+}
+
+.emoji {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 50px;
+	height: 50px;
+	box-sizing: border-box;
+	border: 1px white solid;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	transform: translatey(0px);
+	animation: float 6s ease-in-out infinite;
+	@include increment-delay($type: animation, $offset: .5s);
+	
+	&:hover {
+		-webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
+	}
+	
+	a {
+		text-decoration: none;
+	}
+	span {
+		width: 100%;
+		height: 100%;
+		font-size: 3rem;
+		border: none;
+	}
+}
+
+.content {
+	margin: 2rem 0;
+}
+
+.emoji-link {
+	text-decoration: none;
+}
+}
