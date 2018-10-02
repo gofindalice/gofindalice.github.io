@@ -18,12 +18,13 @@ title{
 	border-color: silver;
 	border-width: 4px;
 	font-size: 25px;
+	font-family: Impact, sans-serif;
 }
   
  .bio{
  	color: white;
-    font-size: 20px;
-    font-family: Arial;
+    font-size: 18px;
+    font-family: Helveitca, sans-serif;
  }
 
  .smaller-image{
